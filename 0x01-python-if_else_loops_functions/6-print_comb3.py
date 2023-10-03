@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def islower(c):
-    if c >= 'a' and c <= 'z':
-        return True
-    return False
+for i in range(9):
+    for j in range(i + 1, 10):
+        print('{:02d}'.format(i * 10 + j), end=' ')
+    print()
