@@ -8,4 +8,4 @@ if number < 0:
 elif last > 5:
     print('{} and is greater than 5'.format(last))
 else:
-    print('is {} and is 0'.format(last))
+    print('{} and is 0'.format(last))
