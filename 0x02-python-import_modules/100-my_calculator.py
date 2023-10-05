@@ -12,24 +12,14 @@ if __name__ == '__main__':
     x = sys.argv[2]
     n = int(sys.argv[3])
 
-    if x not in '+-*/':
+    if x == '+':
+        print('{} {} {} = {}'.format(m, x, n, add(m, n)))
+    elif x == '-':
+        print('{} {} {} = {}'.format(m, x, n, sub(m, n)))
+    elif x == '*':
+        print('{} {} {} = {}'.format(m, x, n, mul(m, n)))
+    elif x == '/':
+        print('{} {} {} = {}'.format(m, x, n, div(m, n)))
+    else:
         print('Unknown operator. Available operators: +, -, * and /')
-        sys.exit(1)
-    else:  
-        m = int(sys.argv[1])
-        n = int(sys.argv[3])
-
-        if x == '+':
-            print('{} {} {} = {}'.format(m, x, n, add(m,n)))
-            sys.exit(0)
-        if x == '-':
-            print('{} {} {} = {}'.format(m, x, n, sub(m,n)))
-            sys.exit(0)
-        if x == '*':
-            print('{} {} {} = {}'.format(m, x, n, mul(m,n)))
-            sys.exit(0)
-        if x == '/':
-            print('{} {} {} = {}'.format(m, x, n, div(m,n)))
-            sys.exit(0)
-
-
+        exit(1)
