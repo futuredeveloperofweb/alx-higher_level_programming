@@ -3,35 +3,36 @@
 
 
 class Square:
-    """define the sqare class"""
+    """Define the sqare class"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """constaractor
+        """Satart a new square
 
         Args:
-            size: length of a side in the square
-            position: the position of the square
+            size (int): length of a side in the square
+            position (int, int): the position of the square
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
         """Proprety for the lenght of a side square"""
-        return self.__size
+        return (self.__size)
 
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError('size must be an integer')
-        if value < 0:
+        elif value < 0:
             raise ValueError('size must be >= 0')
         self.__size = value
 
     @property
     def position(self):
         """Property of the position of the square"""
-        return self.__position
+        return (self.__position)
+
     @position.setter
     def position(self, value):
         if (not isinstance(value, tuple) or
@@ -47,13 +48,14 @@ class Square:
         Return:
             the size square
         """
-        return self.__size ** 2
+        return (self.__size ** 2)
 
     def my_print(self):
         """Prints the square"""
         if self.__size == 0:
-            print()
+            print('')
             return
+
         [print('') for i in range(0, self.__position[1])]
         for i in range(0, self.__size):
             [print(' ', end='') for j in range(0, self.__position[0])]

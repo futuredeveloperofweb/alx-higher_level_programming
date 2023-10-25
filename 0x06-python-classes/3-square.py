@@ -2,7 +2,7 @@
 """Square module"""
 
 class Square:
-    """define the sqare class"""
+    """Define the sqare class"""
 
     def __init__(self, size=0):
         """constaractor
@@ -21,9 +21,9 @@ class Square:
         self.__size = size
 
     def area(self):
-        """area of the square
+        """Area of the square
 
-        Return:
-            the size square
+        Returns:
+            The size squared
         """
         return self.__size ** 2
