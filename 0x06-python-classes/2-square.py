@@ -1,11 +1,16 @@
 #!/usr/bin/python3i
-"""square module"""
+"""Square module"""
+
+
 class Square:
     """define the sqare class"""
+
     def __init__(self, size=0):
         """constaractor
+
         Args:
             size: length of a side in the square
+
         Raises:
             TypeError: if size is not integer
             ValueError: if size is less than 0

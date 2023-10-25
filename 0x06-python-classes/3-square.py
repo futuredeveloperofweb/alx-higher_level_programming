@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""square module"""
+"""Square module"""
 
 class Square:
     """define the sqare class"""
 
     def __init__(self, size=0):
         """constaractor
+
         Args:
             size: length of a side in the square
 
