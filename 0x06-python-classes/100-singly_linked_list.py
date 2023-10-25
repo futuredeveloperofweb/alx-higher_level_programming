@@ -45,7 +45,7 @@ class SinglyLinkedList:
         """Constroctor"""
 
         self.__head = None
-    
+
     def sorted_insert(self, value):
         """inserts a new Node into the list
         in an increasing order
