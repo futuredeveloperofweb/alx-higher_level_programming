@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Node module"""
+"""Define a class of a SinglyLinkedList"""
 
 
 class Node:
@@ -17,12 +17,8 @@ class Node:
 
     @property
     def data(self):
-        """Property for the data in the node
-
-        Raises:
-            TypeError: if data is not an integer
-        """
-        return self.__data
+        """Property for the data in the node"""
+        return (self.__data)
 
     @data.setter
     def data(self, value):
@@ -32,16 +28,12 @@ class Node:
 
     @property
     def next_node(self):
-        """Property for the next_node instance
-
-        Raises:
-            TypeError: if next_node is not an object
-        """
-        return self.__next_node
+        """Property for the next_node instance"""
+        return (self.__next_node)
 
     @next_node.setter
     def next_node(self, value):
-        if not isinstance(next_node, Node) and value is not None:
+        if not isinstance(value, Node) and value is not None:
             raise TypeError('next_node must be a Node object')
         self.__next_node = value
 
@@ -49,7 +41,7 @@ class Node:
 class SinglyLinkedList:
     """Defines a Singly_linked_list"""
 
-    def __init__(self, head):
+    def __init__(self):
         """Constroctor"""
 
         self.__head = None
@@ -57,7 +49,6 @@ class SinglyLinkedList:
     def sorted_insert(self, value):
         """inserts a new Node into the list
         in an increasing order
-
         Args:
             value (node): the node to insert
         """
@@ -78,9 +69,9 @@ class SinglyLinkedList:
 
     def __str__(self):
         """Print the data of the SinglyLinkedList"""
-        value = []
+        values = []
         tp = self.__head
         while tp is not None:
-            value.append(str(tp.data))
+            values.append(str(tp.data))
             tp = tp.next_node
-        return ('\n'.join(value))
+        return ('\n'.join(values))
