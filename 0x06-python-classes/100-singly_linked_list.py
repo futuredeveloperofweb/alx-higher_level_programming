@@ -68,7 +68,8 @@ class SinglyLinkedList:
             tp.next_node = new
 
     def __str__(self):
-        """Print the data of the SinglyLinkedList"""
+        """Define the Print() of the SinglyLinkedList"""
+
         values = []
         tp = self.__head
         while tp is not None:
