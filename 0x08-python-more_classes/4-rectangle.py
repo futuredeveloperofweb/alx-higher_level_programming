@@ -54,3 +54,6 @@ class Rectangle:
         if self.__width != 0 and self.__height != 0:
             s += '\n'.join('#' * self.__width for i in range(self.height))
         return s
+
+    def __repr__(self):
+        return f'Rectangle({self.width}, {self.height})'
