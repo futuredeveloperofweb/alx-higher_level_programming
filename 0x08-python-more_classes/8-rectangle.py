@@ -22,25 +22,6 @@ class Rectangle:
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
 
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """a function that return the biggest rectangle
-        Args:
-            rect_1: the first rectangle
-            rect_2: the second rectangle
-        Return:
-            the biggest rectangle
-        Raises:
-            TypeError: if one of the variable is not of type Rectangle
-        """
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError('rect_1 must be an instance of Rectangle')
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError('rect_2 must be an instance of Rectangle')
-        if rect_1.area() > rect_2.area():
-            return rect_1
-        return rect_2
-
     @property
     def width(self):
         """getter for the private instance width"""
@@ -91,3 +72,22 @@ class Rectangle:
     def __repr__(self):
         """will print a message"""
         return f'Rectangle({self.width}, {self.height})'
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """a function that return the biggest rectangle
+        Args:
+            rect_1: the first rectangle
+            rect_2: the second rectangle
+        Return:
+            the biggest rectangle
+        Raises:
+            TypeError: if one of the variable is not of type Rectangle
+        """
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError('rect_1 must be an instance of Rectangle')
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError('rect_2 must be an instance of Rectangle')
+        if rect_2.area() > rect_1.area():
+            return rect_2
+        return rect_1
