@@ -17,11 +17,6 @@ class Rectangle:
         self.width = width
         Rectangle.number_of_instances += 1
 
-    def __del__(self):
-        """a message shown when a message is deleted"""
-        print('Bye rectangle...')
-        Rectangle.number_of_instances -= 1
-
     @property
     def width(self):
         """getter for the private instance width"""
@@ -73,6 +68,11 @@ class Rectangle:
         """will print a message"""
         return f'Rectangle({self.width}, {self.height})'
 
+    def __del__(self):
+        """a message shown when a message is deleted"""
+        print('Bye rectangle...')
+        Rectangle.number_of_instances -= 1
+
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """a function that return the biggest rectangle
@@ -94,8 +94,8 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """a function that return a square
+        '''a function that return a square
         Args:
             size: the size of the square
-        """
+        '''
         return cls(size, size)
