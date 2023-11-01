@@ -44,8 +44,3 @@ def matrix_divided(matrix, div):
 if __name__ == '__main__':
     import doctest
     dectest.testfile('tests/2-matrix_divided.txt')
-
-
-if __name__ == '__main__':
-    import doctest
-    doctest.testfile('tests/3-say_my_name.txt')
