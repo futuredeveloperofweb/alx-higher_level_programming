@@ -1,5 +1,18 @@
 #!usr/bin/python3
+"""Module for say_my_name funcion"""
+
+
 def say_my_name(first_name, last_name=""):
+    """a function that prints a name
+
+    Args:
+        first_name (str): the first argument
+        last_name (str): the second argument
+    Returns:
+        prints My name is <first name> <last name>
+    Raises:
+        TypeError: if first_name or last_name arguments are not of type str
+    """
     if not isinstance(first_name, str):
         raise TypeError('first_name must be a string')
     if not isinstance(last_name, str):
