@@ -3,11 +3,12 @@
 
 
 def text_indentation(text):
-    """a function that prints a text with 2 new lines after each of these characters: ., ? and :
+    """a function that prints a text with 2 new
+    lines after each of these characters: ., ? and:
 
     Args:
         test (str): the text to print
-    Returns: 
+    Returns:
         the text with new lines whenever it reacchs ". or , or ?"
     Raises:
         TypeError: if the text is not of str type
@@ -19,7 +20,7 @@ def text_indentation(text):
         text = (delim + '\n\n').join(
             [line.strip(" ") for line in text.split(delim)])
 
-    print(text , end='')
+    print(text, end='')
 
 
 if __name__ == '__main__':
