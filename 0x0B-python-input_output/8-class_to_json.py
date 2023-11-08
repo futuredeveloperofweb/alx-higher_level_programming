@@ -3,7 +3,7 @@
 
 
 def class_to_json(obj):
-    """a function that returns the dictionary description with simple data structure
+    """a function that returns the dictionary description
     Args:
         obj: is an instance of a Class
     """

@@ -6,12 +6,12 @@ def pascal_triangle(n):
     """returns a list of lists of integers representing the Pascal triangle"""
     if n <= 0:
         return []
-    l = [[1]]
-    while len(l) != n:
-        t = l[-1]
+    tri = [[1]]
+    while len(tri) != n:
+        tel = tri[-1]
         tmp = [1]
-        for i in range(len(t) - 1):
-            tmp.append(t[i] + t[i + 1])
+        for i in range(len(tel) - 1):
+            tmp.append(tel[i] + tel[i + 1])
         tmp.append(1)
-        l.append(tmp)
-    return l
+        tri.append(tmp)
+    return tri
