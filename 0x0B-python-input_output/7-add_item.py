@@ -6,12 +6,12 @@ save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
-l = list(sys.argv[1:])
+arg_list = list(sys.argv[1:])
 
 try:
     data = load_from_json_file('add_item.json')
 except Exception:
     data = []
 
-data.extend(l)
+data.extend(arg_list)
 save_to_json_file(data, 'add_item.json')

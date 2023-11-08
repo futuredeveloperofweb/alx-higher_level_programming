@@ -3,9 +3,9 @@
 
 
 def pascal_triangle(n):
-    l = []
+    """returns a list of lists of integers representing the Pascal triangle"""
     if n <= 0:
-        return l
+        return []
     l = [[1]]
     while len(l) != n:
         t = l[-1]
