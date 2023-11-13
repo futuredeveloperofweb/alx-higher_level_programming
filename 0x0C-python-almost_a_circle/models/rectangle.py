@@ -18,6 +18,7 @@ class Rectangle(Base):
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, n_width):
         if type(n_width) is not int:
@@ -29,6 +30,7 @@ class Rectangle(Base):
     @property
     def height(self):
         return self.__height
+
     @height.setter
     def height(self, n_height):
         if type(n_height) is not int:
@@ -40,6 +42,7 @@ class Rectangle(Base):
     @property
     def x(self):
         return self.__x
+
     @x.setter
     def x(self, n_x):
         if type(n_x) is not int:
@@ -51,6 +54,7 @@ class Rectangle(Base):
     @property
     def y(self):
         return self.__y
+
     @y.setter
     def y(self, n_y):
         if type(n_y) is not int:
@@ -76,7 +80,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """print a message"""
-        return f'[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}'
+        return f'[Rectangle]({self.id}) {self.x}/{self.y}
+    - {self.width}/{self.height}'
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
@@ -89,4 +94,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """that returns the dictionary representation of a Rectangle"""
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
