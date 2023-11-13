@@ -27,9 +27,6 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, n_size):
-        if n_size <= 0:
-            raise TypeError('width must be an integer')
-        self.__size = n_size
         self.width = n_size
         self.height = n_size
 
@@ -48,4 +45,4 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """returns the dictionary representation of a Square"""
-        return {'x': self.x, 'width': self.width, 'id': self.id, 'y': self.y}
+        return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
