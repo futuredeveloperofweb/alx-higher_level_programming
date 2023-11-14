@@ -30,7 +30,7 @@ class Base:
         Args:
             list_dictionaries: is a list of dictionaries
         """
-        if list_dictionaries is None:
+        if list_dictionaries is None or not list_dictionarie:
             return '[]'
         else:
             json_str = json.dumps(list_dictionaries)
