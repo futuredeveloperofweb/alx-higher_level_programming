@@ -36,7 +36,7 @@ class Rectangle(Base):
         if type(n_height) is not int:
             raise TypeError('height must be an integer')
         if n_height <= 0:
-            raise ValueError('height must be an > 0')
+            raise ValueError('height must be > 0')
         self.__height = n_height
 
     @property
