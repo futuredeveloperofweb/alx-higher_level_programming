@@ -189,5 +189,6 @@ class TestBase(unittest.TestCase):
         self.assertFalse(r1 is r2)
         self.assertFalse(r1 == r2)
 
+
 if __name__ == "__main__":
     unittest.main()

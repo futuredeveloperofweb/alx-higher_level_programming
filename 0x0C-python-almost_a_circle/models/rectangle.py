@@ -97,3 +97,7 @@ class Rectangle(Base):
         """that returns the dictionary representation of a Rectangle"""
         return {'x': self.x, 'y': self.y, 'id': self.id,
                 'height': self.height, 'width': self.width}
+
+
+if __name__ == '__main__':
+    print(str(Rectangle))
