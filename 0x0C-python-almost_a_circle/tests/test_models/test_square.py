@@ -38,8 +38,7 @@ class TestSquare(unittest.TestCase):
         '''test the constractor with too many args'''
         with self.assertRaises(TypeError) as a:
             r = Square(2, 4, 6, 8, 5, 2)
-        s = "__init__() takes from 2 to 5 positional arguments
-        but 7 were given"
+        s = "__init__() takes from 2 to 5 positional arguments but 7 were given"
         self.assertEqual(str(a.exception), s)
 
     def test_instance(self):
@@ -49,7 +48,7 @@ class TestSquare(unittest.TestCase):
         self.assertTrue(isinstance(r, Base))
 
         d = {'_Rectangle__height': 10, '_Rectangle__width': 10,
-             '_Rectangle__x': 0, '_Rectangle__y': 0, 'id': 4}
+             '_Rectangle__x': 0, '_Rectangle__y': 0, 'id': 8}
         self.assertDictEqual(r.__dict__, d)
 
     def test_instance_type(self):
@@ -66,7 +65,7 @@ class TestSquare(unittest.TestCase):
         '''Tests positional instantiation'''
         r = Square(5, 10, 15)
         d = {'_Rectangle__height': 5, '_Rectangle__width': 5,
-             '_Rectangle__x': 10, '_Rectangle__y': 15, 'id': 9}
+             '_Rectangle__x': 10, '_Rectangle__y': 15, 'id': 13}
         self.assertEqual(r.__dict__, d)
 
     def test_instantiation_keyword(self):

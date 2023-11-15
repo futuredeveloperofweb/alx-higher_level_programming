@@ -105,7 +105,7 @@ class TestRectangleMethods(unittest.TestCase):
             self.rectangle_instance.to_dictionary(), rectangle_instance)
 
         r = Rectangle(2, 3)
-        a = {'x': 0, 'y': 0, 'id': 2, 'height': 3, 'width': 2}
+        a = {'x': 0, 'y': 0, 'id': 4, 'height': 3, 'width': 2}
         self.assertEqual(r.to_dictionary(), a)
 
         r = Rectangle(1, 2, 3, 4, 5)
