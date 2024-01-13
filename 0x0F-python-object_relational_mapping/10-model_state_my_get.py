@@ -12,13 +12,13 @@ if __name__ == "__main__":
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(sys.argv[1], sys.argv[2],
-                               sys.argv[3]),pool_pre_ping=True)
+                                   sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
     st = session.query(State).filter(State.name == argv[4]).first()
     if st:
-        print("{}".format(st.id))
+        print('{}'.format(st.id))
     else:
-        print("Not found")
+        print('Not found')
     session.close()
