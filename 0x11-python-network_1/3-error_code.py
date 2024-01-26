@@ -1,1 +1,20 @@
-#!/usr/bin/python3 4-hbtn_status.py 5-hbtn_header.py 6-post_email.py 7-error_code.py 8-json_api.py 10-my_github.py
+#!/usr/bin/python3
+'''script that takes in a URL, sends a request to the URL and
+displays the body of the response'''
+import urllib.request
+import urllib.parse
+import urllib.error
+import sys
+
+
+if __name__ == '__main__':
+    url = sys.argv[1]
+
+    data = urllib.parse.urlencode([])
+    data = data.encode('ascii')
+
+    req = urllib.request.Request(url, data)
+    try:
+        resp = urllib.request.urlopen(req)
+    except urllib.error.HTTPError as e:
+        print('Error code: ', e.code)
