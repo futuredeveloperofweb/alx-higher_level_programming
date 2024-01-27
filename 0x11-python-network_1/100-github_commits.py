@@ -2,7 +2,6 @@
 '''A script that takes 2 arguments in order to solve this challenge
 '''
 import requests
-import requests.auth
 import sys
 
 
@@ -13,11 +12,11 @@ if __name__ == '__main__':
 
     r = requests.get(url)
 
+    com = r.json()
     try:
-        commits = r.json()
-        for com in commits[:10]:
-            sha = com['sha']
-            auth_n = com['commit']['author']['name']
+        for i in range(10):
+            sha = com[i].get('sha')
+            auth_n = com[i].get('commit').get('author').get('name')
             print('{}: {}'.format(sha, auth_n))
-    except ValueError:
-        print('None')
+    except IndexError:
+        pass
