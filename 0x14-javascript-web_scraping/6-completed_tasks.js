@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// web scrapper
+// script that computes the number of tasks completed by user id.
 
 const request = require('request');
 

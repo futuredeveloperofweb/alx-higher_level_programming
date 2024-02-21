@@ -1,4 +1,5 @@
 #!/usr/bin/node
+// script that prints all characters of a Star Wars movie
 
 const request = require('request');
 const id = process.argv[2];
@@ -10,7 +11,6 @@ request.get(url, (error, response, body) => {
   } else {
     const content = JSON.parse(body);
     const characters = content.characters;
-    // console.log(characters);
     for (const character of characters) {
       request.get(character, (error, response, body) => {
         if (error) {

@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Read from file
+// script that reads and prints the content of a file.
 
 const filesys = require('fs');
 filesys.readFile(process.argv[2], 'utf-8',

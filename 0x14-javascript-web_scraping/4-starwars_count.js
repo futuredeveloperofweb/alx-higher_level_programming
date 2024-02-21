@@ -1,5 +1,7 @@
 #!/usr/bin/node
-// Number of films with the given character ID
+// script that prints the number of movies where the character
+// “Wedge Antilles” is present.
+
 const request = require('request');
 let num = 0;
 
